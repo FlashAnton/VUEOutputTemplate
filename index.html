@@ -1,0 +1,37 @@
+<HTML>
+	<!-- Заголовок страницы в браузере -->
+	<TITLE id="outer">{{ ttl }}</TITLE>
+	<BODY>
+		<!-- Подключение ядра Vue.js к проекту -->
+		<SCRIPT src="Vue.js"></SCRIPT>
+		<!-- Элементы гипертекстовой разметки -->
+		<DIV id="inner">
+			{{ msg }}
+		</DIV>
+		
+		<!-- Cценарий функционирования фреймворка -->
+		<SCRIPT type="text/javascript">
+			//Объект Vue для тега <DIV> и его дочерних
+			//(вложенных) элементов
+			var appVueDiv = new Vue(
+			{
+				el: '#inner',
+				data:
+				{
+					msg: 'Начало работы со Vue.js'
+				}
+			})
+			//Объект Vue для тега <TITLE>
+			var appVueTitle = new Vue(
+			{
+				el: '#outer',
+				data: {	ttl: 'Шаблон Vue.js (2020)'}
+			})
+		</SCRIPT>
+		
+		<!-- Стилевое оформление страницы -->
+		<STYLE type="text/css">
+			
+		</STYLE>
+	</BODY>
+</HTML>
